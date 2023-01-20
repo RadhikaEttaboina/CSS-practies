@@ -1,0 +1,78 @@
+<html>
+<head>
+<style>
+
+div{
+border:1px solid blue;
+width:250px;
+height:110px;
+transform:translate(20px,20px);
+}
+.h1{
+border:1px solid blue;
+width:250px;
+height:110px;
+transform:rotate(150deg);
+}
+h2{
+transform:skew(30deg);
+}
+.h3{
+transform:scale(0.5,1);
+margin:7 0px;
+}
+.transition{
+margin-top:-350px;
+margin-left:450px;
+border:1px solid red;
+width:250px;
+height:100px;
+transition:height 2s, width 2s , transform 3s;
+background-color:pink;
+color:white;
+}
+
+.animation{
+position:absolute;
+left:20px;
+top:20px;
+border:1px solid red;
+width:250px;
+height:100px;
+animation-name:changecolor;
+animation-duration:6s;
+animation-iteration-count:infinite;
+
+}
+
+@keyframes changecolor{
+0%{background-color:blue;left:0px;top:0px;}
+30%{background-color:red;left:100px;top:200px;}
+50%{background-color:green;left:300px;top:400px;}
+8-0%{background-color:orange;left:600px;top:300px;}
+100%{background-color:yellow;left:0px;top:0px;}
+}
+.transition:hover{
+height:200px;
+width:300px;
+transform:rotate(190deg);
+}
+
+</style>
+</head>
+<body>
+
+<div>
+<h1>Css Transforms</h1>
+</div>
+<br><br>
+<br><br>
+
+<h1 class="h1">rotate</h1><br><br>
+<h2>skew</h2>
+<h3 class="h3">scale</h3>
+<h1 align="center" class="transition">Transiton</h1>
+<h1 class="animation">Animation</h1>
+
+</body>
+</html>
